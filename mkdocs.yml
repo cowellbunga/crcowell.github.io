@@ -1,0 +1,61 @@
+# Project details
+site_name: Chandler Cowell's MGIST Portfolio
+site_url: https://crcowell.github.io/
+site_author: Chandler Cowell
+site_description: >-
+  I am Chandler Cowell, an economist and spatial analytics master's student. 
+  Welcome to my MGIST portfolio page powered by Git/Github, Markdown, and Python.
+
+# Github Repo
+repo_name: cowellbunga/crcowell.github.io
+repo_url: https://github.com/cowellbunga/crcowell.github.io
+edit_uri: edit/main/docs/
+
+# Theme
+theme:
+  name: simplex
+  features:
+    - navigation.side.indexes
+    - revision.date
+    - revision.history
+extra_css: 
+  - overrides/multi-size-headers.css
+
+# Extensions
+markdown_extensions:
+  # Python Markdown  
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: "#"
+      permalink_title: Anchor link to this section for reference
+  # PyMdown Extensions
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: 
+        - docs
+
+# Navigation Tree
+nav:
+  - Home: index.md
+  - About: about.md
+  - Core Competencies:
+    - Databases and Database Management: corecomps/database.md
+    - Modeling and Analytics: corecomps/modeling.md
+    - Programming: corecomps/programming.md
+    - Web Services: corecomps/web.md
+  - Capstone Experience: capstone.md
+  - Program Reflection: reflection.md
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date
+  - macros:
+      modules: 
+          - mkdocs-terminal:terminal.pluglets.tile_grid.main
