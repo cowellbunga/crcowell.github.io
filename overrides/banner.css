@@ -1,0 +1,20 @@
+.md-header {
+    top: 84px;          /* This setting prevents the Material header from imposing into the space of the banner! */
+    z-index: 0;
+    height: 72px;
+}
+
+.banner {
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-shadow: 1px 1px 18px rgb(94, 94, 94);
+    background-image: url("images/banner2.png");
+}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+<!-- Custom Banner -->
+<div class="banner">
+  {% if page.title == "Home"%}
+  {% else %}
+    <p>{{page.title}}</p>
+  {% endif %}
+</div>
+{{ super() }}
+{% endblock %}
