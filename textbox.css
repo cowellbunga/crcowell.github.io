@@ -1,0 +1,11 @@
+.textbox {
+    border-radius: 25px;
+    padding: 0.1em;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 2px solid #cdcdcd;
+    background-color: #fdd8d8;
+    color:#000000;
+    font-size: 16px;
+  }

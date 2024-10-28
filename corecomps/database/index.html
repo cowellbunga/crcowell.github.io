@@ -29,6 +29,7 @@
         <link href="../../overrides/hide-prev-next.css" rel="stylesheet">
         <link href="../../overrides/nav-hover.css" rel="stylesheet">
         <link href="../../overrides/banner.css" rel="stylesheet">
+        <link href="../../overrides/textbox.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -129,12 +130,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#example-1" class="nav-link">Example 1</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="2"><a href="#example-2" class="nav-link">Example 2</a>
+            <li class="nav-item" data-bs-level="2"><a href="#self-hosting-arcgis-content-using-arcserver-and-postgres" class="nav-link">Self-Hosting ArcGIS Content using ArcServer and Postgres</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -145,20 +141,45 @@
 
 <hr>
 
-<h2 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="self-hosting-arcgis-content-using-arcserver-and-postgres"><strong>Self-Hosting ArcGIS Content using ArcServer and Postgres</strong><a class="headerlink" href="#self-hosting-arcgis-content-using-arcserver-and-postgres" title="Anchor link to this section for reference">#</a></h2>
 <hr>
 
-<h4 id="problem-description">Problem Description<a class="headerlink" href="#problem-description" title="Anchor link to this section for reference">#</a></h4>
-<h4 id="methods">Methods<a class="headerlink" href="#methods" title="Anchor link to this section for reference">#</a></h4>
-<h4 id="results">Results<a class="headerlink" href="#results" title="Anchor link to this section for reference">#</a></h4>
+<div class="textbox">
+<span>
+<p style='margin-top:1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Problem Description</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/arcserver_example.png" alt="ArcServer rest services page" width="400" />
+Self-hosting ArcGIS data and geoprocesses enables the developer to customize project infrastructure (hardware and software) to meet project needs. It also enables the developer to customize security settings to ensure proper access when administrative rights are needed for some users, but not all of them. To explore this concept, a remote server was  established on NCSU VCL infrastructure to host an ArcServer instance connected to a postgres backend database.
+</p>
+</p>
+
 <hr>
 
-<h2 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Anchor link to this section for reference">#</a></h2>
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Analysis</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_catalog.png" alt="ArcServer rest services page" width="360" />
+A geodatabase was created using postgres and ArcGIS Pro to serve as the backend data source for all content served by ArcServer. <br><br> The geodatabase includes different users types, such as admins and general users. Admins can add and remove content from the server, while general users are only able to access the served content. <br><br> Figure 1 shows all of the layers that are hosted from the backend geodatabase. The layers include tables, feature classes, and views that have been added to the geodatabase using my personal admin account, crcowell.
+</p>
+</p>
+
 <hr>
 
-<h4 id="problem-description_1">Problem Description<a class="headerlink" href="#problem-description_1" title="Anchor link to this section for reference">#</a></h4>
-<h4 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Anchor link to this section for reference">#</a></h4>
-<h4 id="results_1">Results<a class="headerlink" href="#results_1" title="Anchor link to this section for reference">#</a></h4></div>
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Results</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="400" />
+Figure 2 shows the resulting ArcGIS Online (AGOL) web map that uses the various layers hosted on the ArcServer instance. The buildings layer pop-up window is shown to highlight that the metadata is served as imported.
+</p>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Reflection</b></p>
+<p style='margin-left:2em; display: inline-block;'>
+This hosting scenario showed the developer how to successfully establish infrastructure to host spatial data using personal infrastructure. User access and security settings were used to provide an overview of the different roles that can be established to restrict certain data. <br><br> A good way to build upon this scenario would be to create certain views and datasets that are only available to specific users. Pairing this sort of setup with a mobile use case, using something like ArcGIS Field Maps, would provide the necessary infrastructure for collecting and serving field data in an efficient manner.
+</p> 
+</p>
+</span>
+</div></div>
             </div>
         </div>
 

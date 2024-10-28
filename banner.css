@@ -1,11 +1,15 @@
 .md-header {
-    top: 84px;          /* This setting prevents the Material header from imposing into the space of the banner! */
+    top: 84px;
     z-index: 0;
     height: 72px;
 }
 
 .banner {
-    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    max-height: 64px;
     position: sticky;
     top: 0px;
     left: 0;
@@ -16,5 +20,5 @@
     color: rgb(255, 255, 255);
     font-weight: bolder;
     text-shadow: 1px 1px 18px rgb(94, 94, 94);
-    background-image: url("images/banner2.png");
+    background-image: url("/images/banner.png");
 }
