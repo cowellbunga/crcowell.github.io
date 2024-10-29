@@ -153,8 +153,8 @@
 <span>
 <p style='margin-top:1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Problem Description</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/arcserver_example.png" alt="ArcServer rest services page" width="400" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'> <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210936"><img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/hsi_paper.png" alt="ArcServer rest services page" width="260" /></a>
+As an independent study topic, I took on the responsibility of learning and scripting the North Carolina oyster habitat suitability index (HSI) described in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210936">Theuerkauf et al. (2019)</a>. I worked under the guidance of my project team that included Dr. David Eggleston and Dr. Del Bohnenstiehl from NC State, Dr. Brandon Puckett from the National Oceanic and Atmospheric Administration (NOAA), and Bennett Paradis from the North Carolina Department of Marine Fisheries (NCDMF). <br><br> The goals of this effort were to script and document the HSI process, HSI comparison, and HSI to oyster density comparison to expedite the process and allow for a more streamlined analysis.
 </p>
 </p>
 
@@ -162,8 +162,8 @@
 
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Analysis</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_catalog.png" alt="ArcServer rest services page" width="360" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/hsi_readme_intro.png" alt="ArcServer rest services page" width="450" /> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; margin-top: 2em; display: inline-block;" src="../images/hsi_readme_vars.png" alt="Legend for viability score" width=450" />
+To establish a firm understanding of the concept and application, I reviewed the paper linked in the Problem Description, as well as two other relavant papers. The project team helped me learn the structure of observed oyster data and also helped me understand how the data related to the HSI by testing with updated data alongside historical data for comparison. <br><br> The team also advised me on the which explanatory variables should or should not be considered. The exclusionary variables included: bathymetry, bottom type, shellfish leases, nursery areas, military zones, and navigational channels. The threshold variables included: salinity, larval import/export to different habitat types, dissolved oxygen, material stockpile sites, boat ramps, chlorophyll, and flow. A data inventory, ReadMe, and script were produced to organize the data and analysis into a Python environment. The script includes logic to calculate the HSI, but also includes logic to perform further assessments such as HSI to HSI comparisons and relating HSI to oyster density. <br><br> The HSI calculation function within the tool includes two parameters that can be toggled to alter the scope of a specific HSI run: the model focus and the model type. The model can focus on either metapopulation persistence, water filtration, or both. The model type can be null (general), reproduction-based, or time-based.
 </p>
 </p>
 
@@ -171,8 +171,8 @@
 
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Results</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="400" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/hsi_map_original.png" alt="Web map resulting from ArcServer content" width="400" /> <img style="float: right; margin-right:1em; margin-left:1em; margin-top: 2em; display: inline-block;" src="../images/hsi_map_updated.png" alt="Legend for viability score" width=400" /> <img style="float: left; border-radius: 8px; margin-right:1em; margin-left:1em; margin-top: 3.5em; display: inline-block;" src="../images/hsi_density_2007-2023.png" alt="Legend for viability score" width=320" />
+The results of the process are served via the Python console outputs, output data sheets, and graphs produced by the scripts. The input variables are used by the script to produce HSI estimates that can be compared. The comparison function compares two sets of HSI results, which are the oldest and newest result files by default, but both datasets can be specified by the user. The script also automates the assessment of the relationship between HSI results and oyster density.
 </p>
 
 <hr>
@@ -180,7 +180,7 @@
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Reflection</b></p>
 <p style='margin-left:2em; display: inline-block;'>
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+The project team seems eager to continue developing the tool further to become more data-driven and automated. I hope to continue working with them to make this a reality. It would be very fulfilling for me to assist in making improvements that would influence real-world decisions regarding our State’s critical habitats and natural resources.
 </p> 
 </p>
 </span>
@@ -195,8 +195,8 @@
 <span>
 <p style='margin-top:1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Problem Description</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/arcserver_example.png" alt="ArcServer rest services page" width="400" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'>
+To streamline the process of producing some visual outputs for my <a href="/corecomps/modeling#assessment-of-venus-flytrap-sightings-and-habitat-suitability">Venus Flytrap project</a>, I decided to create a script to automate the process. The project focuses on identifying the overlap between expected Venus flytrap habitats and field observations, to highlight areas where researchers should visit. <br><br> Based on user inputs, contextual visuals need to be produced by the script to show <a href="https://www.inaturalist.org/observations?place_id=30&quality_grade=research&taxon_id=52661">research-grade iNaturalist observations</a> being considered in the analysis. The goal of this effort was to produce a static web page showing flytrap observation images and details for all observations that meet the user-defined criteria.
 </p>
 </p>
 
@@ -204,8 +204,9 @@
 
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Analysis</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_catalog.png" alt="ArcServer rest services page" width="360" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/flytraps_html_gui.png" alt="ArcServer rest services page" width="450" /> <img style="float: right; margin-right:1em; margin-left:1em; margin-top: 2em; display: inline-block;" src="../images/flytraps_html_code.png" alt="Legend for viability score" width=450" />
+The process is bundled in within an ArcGIS Toolbox (see <b>Figure 1</b>) to present the user with an easy-to-use graphical interface for setting their desired criteria. <br><br> The primary criteria set by the user are the count of observations and cutoff year. <br><br> These criteria filter the observations for the user's focus region and limits all outputs to the same scope. The script used for automating the static web page generation is shown below in <b>Figure 2</b>. <br><br> 
+
 </p>
 </p>
 
@@ -213,8 +214,8 @@
 
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Results</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="400" />
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/flytraps_html_example.png" alt="Web map resulting from ArcServer content" width="450" />
+The process outputs a static web page like the one shown in <b>Figure 3</b>. The process leverages Python to automate the generation of custom html code that is defined by user criteria.
 </p>
 
 <hr>
@@ -222,7 +223,7 @@
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
 <b>Reflection</b></p>
 <p style='margin-left:2em; display: inline-block;'>
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+This effort helped me learn how to automate the generation of HTML code using Python. This made it easy to integrate these steps with my existing processes. In the future, it would be nice expand on this by customizing style of the static pages.
 </p> 
 </p>
 </span>
