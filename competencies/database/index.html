@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Chandler Cowell">
+        <link rel="canonical" href="https://crcowell.xyz/competencies/database/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+<!-- Custom Banner -->
+<div class="banner">
+  
+    <p>Databases and Database Management</p>
+  
+</div>
+
+        <title>Databases and Database Management - Chandler Cowell</title>
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-forest-light.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../overrides/multi-size-headers.css" rel="stylesheet">
+        <link href="../../overrides/hide-prev-next.css" rel="stylesheet">
+        <link href="../../overrides/nav-hover.css" rel="stylesheet">
+        <link href="../../overrides/banner.css" rel="stylesheet">
+        <link href="../../overrides/textbox.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Chandler Cowell</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">About Me</a>
+</li>
+                                    
+<li>
+    <a href="../../about/resume/" class="dropdown-item">Resume</a>
+</li>
+                                    
+<li>
+    <a href="../../about/contact/" class="dropdown-item">Contact Me</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Core Competencies</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Databases and Database Management</a>
+</li>
+                                    
+<li>
+    <a href="../modeling/" class="dropdown-item">Modeling and Analytics</a>
+</li>
+                                    
+<li>
+    <a href="../programming/" class="dropdown-item">Programming</a>
+</li>
+                                    
+<li>
+    <a href="../web/" class="dropdown-item">Web Services</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../capstone/" class="nav-link">Capstone Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../reflection/" class="nav-link">Program Reflection</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../about/contact/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../modeling/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#self-hosting-arcgis-content-using-arcserver-and-postgres" class="nav-link">Self-Hosting ArcGIS Content using ArcServer and Postgres</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr>
+
+<h2 id="self-hosting-arcgis-content-using-arcserver-and-postgres"><strong>Self-Hosting ArcGIS Content using ArcServer and Postgres</strong><a class="headerlink" href="#self-hosting-arcgis-content-using-arcserver-and-postgres" title="Anchor link to this section for reference">#</a></h2>
+<hr>
+
+<div class="textbox">
+<span>
+<p style='margin-top:1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Problem Description</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/arcserver_example.png" alt="ArcServer sample map service" width="400" />
+Self-hosting ArcGIS data and geoprocesses enables the developer to customize project infrastructure (hardware and software) to meet project needs. It also enables the developer to customize security settings to ensure proper access when administrative rights are needed for some users, but not all of them. To explore this concept, a remote server was  established on NCSU VCL infrastructure to host an ArcServer instance connected to a postgres backend database.
+</p>
+</p>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Analysis</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_catalog.png" alt="ArcServer rest services page" width="360" />
+A geodatabase was created using postgres and ArcGIS Pro to serve as the backend data source for all content served by ArcServer. <br><br> The geodatabase includes different users types, such as admins and general users. Admins can add and remove content from the server, while general users are only able to access the served content. <br><br> Figure 1 shows all of the layers that are hosted from the backend geodatabase. The layers include tables, feature classes, and views that have been added to the geodatabase using my personal admin account, crcowell.
+</p>
+</p>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Results</b></p>
+<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="400" />
+Figure 2 shows the resulting ArcGIS Online (AGOL) web map that uses the various layers hosted on the ArcServer instance. The buildings layer pop-up window is shown to highlight that the metadata is served as imported.
+</p>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+<b>Reflection</b></p>
+<p style='margin-left:2em; display: inline-block;'>
+This hosting scenario showed the developer how to successfully establish infrastructure to host spatial data using personal infrastructure. User access and security settings were used to provide an overview of the different roles that can be established to restrict certain data. <br><br> A good way to build upon this scenario would be to create certain views and datasets that are only available to specific users. Pairing this sort of setup with a mobile use case, using something like ArcGIS Field Maps, would provide the necessary infrastructure for collecting and serving field data in an efficient manner.
+</p> 
+</p>
+</span>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
