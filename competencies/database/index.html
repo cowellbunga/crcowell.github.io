@@ -146,38 +146,79 @@
 
 <div class="textbox">
 <span>
-<p style='margin-top:1em; text-align:left; margin-left:1em; font-size: 20px;'>
-<b>Problem Description</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/arcserver_example.png" alt="ArcServer sample map service" width="400" />
-Self-hosting ArcGIS data and geoprocesses enables the developer to customize project infrastructure (hardware and software) to meet project needs. It also enables the developer to customize security settings to ensure proper access when administrative rights are needed for some users, but not all of them. To explore this concept, a remote server was  established on NCSU VCL infrastructure to host an ArcServer instance connected to a postgres backend database.
+
+<p style='margin-top: 1em; text-align: left; margin-left: 1em; font-size: 20px;'>
+    <b>Problem Description</b>
 </p>
+<div style="overflow: hidden; margin-left: 2em; margin-right: 2em;">
+    <p style='margin-left: 2em; display: inline-block;'>
+        Self-hosting ArcGIS data and geoprocesses enables the developer to customize project infrastructure (hardware and software) to meet project needs. It also enables the developer to customize security settings to ensure proper access when administrative rights are needed for some users, but not all of them. <br><br> To explore this concept, a remote server was  established on NCSU VCL infrastructure to host an ArcGIS Server instance connected to a Postgres backend database.
+    </p>
+</div>
+
+<hr>
+
+<p style='margin-top: 0.1em; text-align: left; margin-left: 1em; font-size: 20px;'>
+    <b>Analysis</b>
+</p>  
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">  
+    <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em;">
+        <img style="border-radius: 8px;" src="../images/arcserver_example.png" alt="ArcServer sample map service" width="450" />
+        <figcaption> Figure 1. ArcGIS Server sample map service </figcaption>
+    </figure> 
+    <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em; margin-top: 1em; margin-bottom: 2em;">
+        <img style="border-radius: 8px;" src="../images/arcserver_map_service.png" alt="ArcServer rest services page" width="450" />
+        <figcaption> Figure 2. Sample map service in a web map </figcaption>
+    </figure>
+    <p>
+        A geodatabase was created using Postgres and managed via pgAdmin and ArcGIS Pro. ArcGIS Server was used to serve layers publicly from the database - <b>Figure 3</b> shows the established geodatabse is registered as a data store for ArcGIS Server. <br><br> <b>Figure 1</b> shows the <i>SampleWorldCities</i> map service that is published to preview the servers functionality. <br><br> <b>Figure 2</b> shows the <i>SampleWorldCities</i> map service being visualized in an ArcGIS Online web map.
+    </p>
+    <figure style="text-align: center; font-size: 10px; float: left; margin-top: 1em; margin-right: 1em;">
+        <img style="border-radius: 8px;" src="../images/arcserver_gdb.png" alt="ArcServer data page" width="400" />
+        <figcaption> Figure 3. ArcGIS server data stores page </figcaption>
+    </figure> 
+    <figure style="text-align: center; font-size: 10px; float: left; margin-top: 1em; margin-right: 1em;">
+        <img style="border-radius: 8px;" src="../images/arcserver_roles.png" alt="ArcServer roles page" width="400" />
+        <figcaption> Figure 4. ArcGIS server configured roles </figcaption>
+    </figure> 
+    <p>
+       <br> The geodatabase includes different users types, such as admins and general users. <br><br> Admins can add and remove content from the server, while general users are only able to access the served content. <br><br> <b>Figure 4</b> shows the user roles that were configured on this project's ArcGIS Server instance.
+    </p>
+</div>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left: 1em; font-size: 20px;'>
+    <b>Results</b>
 </p>
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
+    <figure style="text-align: center; font-size: 10px; float: right; margin-right: 1em; margin-left: 1em; margin-bottom: 7em; margin-top: 2em;">
+        <img style="border-radius: 8px;" src="../images/gewa_catalog.png" alt="Arcserver data catalog" width="250" />
+        <figcaption> Figure 6. Catalog of hosted data </figcaption>
+    </figure> 
+    <p>
+        <b>Figure 5</b> shows the resulting ArcGIS Online (AGOL) web map that uses the various layers hosted on the ArcServer instance. The buildings layer pop-up window is shown to highlight that the metadata is served as imported.
+    </p>
+    <figure style="text-align: center; font-size: 10px; float: left; margin-bottom: 3em;">
+        <img style="border-radius: 8px;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="450" />
+        <figcaption> Figure 5. Web map serving the hosted data </figcaption>
+    </figure>
+    <p>
+        <b>Figure 6</b> shows an ArcGIS catalog displaying the feature classes, tables, and views that are hosted via ArcServer and displayed via web map services. These items were added to the database using my personal user account/role, <i>crcowell</i>, which can be seen in the name of each item.
+    </p>
+</div>
 
 <hr>
 
 <p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
-<b>Analysis</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_catalog.png" alt="ArcServer rest services page" width="360" />
-A geodatabase was created using postgres and ArcGIS Pro to serve as the backend data source for all content served by ArcServer. <br><br> The geodatabase includes different users types, such as admins and general users. Admins can add and remove content from the server, while general users are only able to access the served content. <br><br> Figure 1 shows all of the layers that are hosted from the backend geodatabase. The layers include tables, feature classes, and views that have been added to the geodatabase using my personal admin account, crcowell.
+    <b>Reflection</b> 
 </p>
-</p>
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
+    <p>
+        This hosting scenario showed the developer how to successfully establish infrastructure to host spatial data using personal infrastructure. User access and security settings were used to provide an overview of the different roles that can be established to restrict certain data. <br><br> A good way to build upon this scenario would be to create certain views and datasets that are only available to specific users. Pairing this sort of setup with a mobile use case, using something like ArcGIS Field Maps, would provide the necessary infrastructure for collecting and serving field data in an efficient manner.
+    </p>
+</div>
 
-<hr>
-
-<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
-<b>Results</b></p>
-<p style='margin-left:2em; display: inline-block;'> <img style="float: right; border-radius: 8px; margin-right:1em; margin-left:1em; display: inline-block;" src="../images/gewa_webmap.png" alt="Web map resulting from ArcServer content" width="400" />
-Figure 2 shows the resulting ArcGIS Online (AGOL) web map that uses the various layers hosted on the ArcServer instance. The buildings layer pop-up window is shown to highlight that the metadata is served as imported.
-</p>
-
-<hr>
-
-<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
-<b>Reflection</b></p>
-<p style='margin-left:2em; display: inline-block;'>
-This hosting scenario showed the developer how to successfully establish infrastructure to host spatial data using personal infrastructure. User access and security settings were used to provide an overview of the different roles that can be established to restrict certain data. <br><br> A good way to build upon this scenario would be to create certain views and datasets that are only available to specific users. Pairing this sort of setup with a mobile use case, using something like ArcGIS Field Maps, would provide the necessary infrastructure for collecting and serving field data in an efficient manner.
-</p> 
-</p>
 </span>
 </div></div>
             </div>
