@@ -135,4 +135,3 @@ dependencies:
       - mkdocs-bootswatch==1.1
       - mkdocs-dracula-theme==1.0.7
       - mkdocs-terminal==4.6.0
-prefix: /Users/chandler.cowell/.conda/envs/gh_pgs
