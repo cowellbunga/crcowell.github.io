@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Chandler Cowell">
-        <link rel="canonical" href="https://crcowell.xyz/capstone/">
+        <link rel="canonical" href="https://mgist.cowellbunga.dev/capstone/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 <!-- Custom Banner -->
 <div class="banner">
@@ -142,7 +142,83 @@
 <hr>
 
 <h2 id="capstone-experience"><strong>Capstone Experience</strong><a class="headerlink" href="#capstone-experience" title="Anchor link to this section for reference">#</a></h2>
-<hr></div>
+<hr>
+
+<div class="textbox">
+<span>
+
+<p style='margin-top: 1em; text-align: left; margin-left: 1em; font-size: 20px;'>
+    <b>Problem Description</b>
+</p>
+<div style="overflow: hidden; margin-left: 2em; margin-right: 2em;">
+    <p style='margin-left: 2em; display: inline-block;'>
+        My MGIST capstone focused on developing a centralized, TAK-based risk platform for critical infrastructure, in partnership with Digital Cloak. The goal of the project was to connect assets managed in the Team Awareness Kit (TAK) environment to a backend risk service that can summarize current and future hazard conditions (such as weather and climate-related extremes) for each asset. Rather than producing a single static web map, the project emphasized designing a robust integration pattern that links TAK-managed asset identifiers to a dedicated risk analysis API and database.
+    </p>
+</div>
+
+<hr>
+
+<p style='margin-top: 0.1em; text-align: left; margin-left: 1em; font-size: 20px;'>
+    <b>Analysis</b>
+</p> 
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
+    <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em;">
+        <img style="border-radius: 8px;" src="../images/capstone_architecture.png" alt="High-level architecture of TAK server, risk API, and database" width="450" />
+        <figcaption> Figure 1. High-level architecture diagram of TAK server, risk API, and risk database </figcaption>
+    </figure>
+    <p>
+        The capstone environment consisted of a self-hosted TAK server, a FastAPI-based risk service, and a dedicated PostgreSQL database for storing risk summaries keyed by TAK asset identifiers. TAK Server was installed and configured to manage authentication, client connectivity, and the core mission data, while the risk service ran in a separate Python environment on the same virtual machine. A new <i>tak_risk</i> database was created to store per-asset risk scores and categories, with tables designed around the use of TAK unique identifiers (UIDs) as primary keys.
+    </p>
+    <p>
+        The FastAPI risk service exposes endpoints that accept lists of TAK UIDs, compute risk summaries using hazard and climate indicators, and persist the results in the <i>tak_risk</i> database. A small server-side helper script demonstrates the intended integration pattern by calling the risk API for a given UID and returning an overall risk category and score. Throughout the project, configuration work on TLS, authentication, and service connectivity ensured that the prototype reflected real-world constraints associated with secure, defense-oriented environments.
+    </p>
+    <figure style="text-align: center; font-size: 10px; float: left; margin-right: 1em; margin-top: 1em;">
+        <img style="border-radius: 8px;" src="../images/capstone_risk_db_schema.png" alt="Conceptual schema for the tak_risk database" width="380" />
+        <figcaption> Figure 2. Conceptual schema of the <i>tak_risk</i> database keyed by TAK asset UIDs </figcaption>
+    </figure>
+    <p>
+        Weather and climate data are incorporated conceptually in this prototype, with the analysis code structured to pull from authoritative external services and datasets (such as NOAA alerts and climate indicators) as those feeds are integrated. The focus of the capstone was to establish clean interfaces, schemas, and integration logic so that more detailed analytical models and data sources can be added without re-architecting the system.
+    </p>
+</div>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left: 1em; font-size: 20px;'>
+    <b>Results</b>
+</p>
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
+    <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em; margin-top: 1em;">
+        <img style="border-radius: 8px;" src="../images/capstone_risk_api_ui.png" alt="Risk API interactive documentation and example request/response" width="380" />
+        <figcaption> Figure 3. FastAPI risk API UI showing endpoints and example request/response </figcaption>
+    </figure>
+    <p>
+        The project delivered a functioning end-to-end prototype that links TAK-managed assets to a backend risk analysis service. The TAK server was successfully deployed and configured on a virtual machine, with secure web and messaging endpoints, user authentication, and a working <i>cot</i> database. The FastAPI risk service was implemented and deployed in a dedicated environment, accepting TAK UIDs as input and writing risk summaries to the <i>tak_risk</i> database.
+    </p>
+    <p>
+        End-to-end tests using the UID helper script confirmed that a TAK asset&rsquo;s identifier can be passed to the risk API, processed, and returned as a concise risk summary that includes an overall category and score. These tests validated the schema design, the API contract, and the database interactions. Exploratory work on TAK&rsquo;s web interface and associated services also documented the current limits of the server environment and identified clear next steps for surfacing risk information directly inside TAK clients.
+    </p>
+    <figure style="text-align: center; font-size: 10px; float: left; margin-right: 1em; margin-top: 1em;">
+        <img style="border-radius: 8px;" src="../images/capstone_tak_metrics_dashboard.png" alt="TAK web metrics dashboard connected to the project environment" width="380" />
+        <figcaption> Figure 4. TAK web metrics dashboard illustrating the running server environment </figcaption>
+    </figure>
+</div>
+
+<hr>
+
+<p style='margin-top:0.1em; text-align:left; margin-left:1em; font-size: 20px;'>
+    <b>Reflection</b> 
+</p>
+<div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
+    <p>
+        This capstone experience brought together core themes from the MGIST program: integrating heterogeneous spatial data feeds, designing web services and databases for decision support, and working within the constraints of security-focused infrastructure. Building the TAK-based risk platform strengthened my comfort with service-oriented architectures, API design, and the tradeoffs involved in separating backend analytics from client-facing tools. It also provided valuable perspective on how small architectural decisions (such as using TAK UIDs as keys) can simplify integration across complex systems.
+    </p>
+    <p>
+        Looking ahead, I would like to extend this work by enriching the risk model with live NOAA alert feeds, historical event data, and downscaled climate projections, and by embedding the risk workflow directly into TAK client plugins so that operators can trigger and view risk summaries from within their primary operational interface. The prototype developed for this capstone provides a solid foundation for those enhancements and a reusable pattern for connecting TAK-managed assets to other types of analytical services.
+    </p>
+</div>
+
+</span>
+</div></div>
             </div>
         </div>
 

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Chandler Cowell">
-        <link rel="canonical" href="https://crcowell.xyz/competencies/modeling/">
+        <link rel="canonical" href="https://mgist.cowellbunga.dev/competencies/modeling/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 <!-- Custom Banner -->
 <div class="banner">
@@ -168,11 +168,11 @@
 </p> 
 <div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
     <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em;">
-        <img style="border-radius: 8px;" src="../images/flytraps_data_gui.png" alt="ArcTools custom hotspot selection GUI" width="450" />
+        <img style="border-radius: 8px;" src="../../images/flytraps_data_gui.png" alt="ArcTools custom hotspot selection GUI" width="450" />
         <figcaption> Figure 1. ArcTools user interface for the hotspot analysis </figcaption>
     </figure> 
     <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em; margin-top: 1em;">
-        <img style="border-radius: 8px;" src="../images/flytraps_sites_gui.png" alt="ArcTools custom site selection GUI" width="450" />
+        <img style="border-radius: 8px;" src="../../images/flytraps_sites_gui.png" alt="ArcTools custom site selection GUI" width="450" />
         <figcaption> Figure 2. ArcTools user interface for the site selection </figcaption>
     </figure>
     <p>
@@ -187,7 +187,7 @@
 </p>
 <div style="overflow: hidden; margin-left: 4em; margin-right: 2em;">
     <figure style="text-align: center; font-size: 10px; float: right; margin-right: 1em; margin-left: 1em;">
-        <img style="border-radius: 8px;" src="../images/flytraps_map_example.png" alt="Example output map of Venus flytrap hotspots and observations" width="500" />
+        <img style="border-radius: 8px;" src="../../images/flytraps_map_example.png" alt="Example output map of Venus flytrap hotspots and observations" width="500" />
         <figcaption> Figure 3. Example output maps of flytrap observations and habitats</figcaption>
     </figure> 
     <p>
@@ -236,11 +236,11 @@
         Once the input datasets are available in the correct locations and formats, the tool can begin the analysis. There are logical checks throughout the process that check for the presence of the input data as well as the results of preprocessing, to prevent both failure and unnecessary processing. The process starts off by taking user preferences which are used to prepare the parcel data and togglable explanatory layers, such as elevation and distance to cropland. <b>Figure 1</b> shows an example of the first stage of the process, where the user sets their preferences, and which are then passed to the preprocessing functions.
     </p>
     <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em;">
-        <img style="border-radius: 8px;" src="../images/phort_prompt.png" alt="Input prompt for the tool" width="450" />
+        <img style="border-radius: 8px;" src="../../images/phort_prompt.png" alt="Input prompt for the tool" width="450" />
         <figcaption> Figure 1. Initial prompt to start process </figcaption>
     </figure> 
     <figure style="text-align: center; font-size: 10px; float: right; margin-left: 1em; margin-top: 1em;">
-        <img style="border-radius: 8px;" src="../images/phort_progress_reporting.png" alt="Progress report from processing script" width="450" />
+        <img style="border-radius: 8px;" src="../../images/phort_progress_reporting.png" alt="Progress report from processing script" width="450" />
         <figcaption> Figure 2. Python console progress report </figcaption>
     </figure>
     <p>
@@ -258,15 +258,15 @@
         After all the input layers are preprocessed, the final score surface is calculated by multiplying all the raster surfaces together. This final surface represents the viability of a grid cell to support a self-sufficient homestead on a scale of 0 (no viability) to 1 (perfect viability). The scoring surface is then used in a zonal analysis where the average homestead score is calculated within each parcel based on the mean score of contained pixels.
     </p>
     <figure style="text-align: center; font-size: 10px; float: right; margin-right: 1em; margin-left: 1em;">
-        <img style="border-radius: 8px;" src="../images/phort_map.png" alt="Map resulting from viability analysis" width="450" />
+        <img style="border-radius: 8px;" src="../../images/phort_map.png" alt="Map resulting from viability analysis" width="450" />
         <figcaption> Figure 3. Map of NC with homestead score surface</figcaption>
     </figure> 
     <figure style="text-align: center; font-size: 10px; float: right; margin-right: 1em; margin-left: 1em;">
-        <img style="border-radius: 8px;" src="../images/phort_example.png" alt="Example tax parcel with viability score" width="450" />
+        <img style="border-radius: 8px;" src="../../images/phort_example.png" alt="Example tax parcel with viability score" width="450" />
         <figcaption> Figure 4. Sample of tax parcels with scores</figcaption>
     </figure> 
     <figure style="text-align: center; font-size: 10px; float: left; margin-right: 1em; margin-left: 1em; margin-top: 4em;">
-        <img src="../images/phort_legend.png" alt="Legend for viability score" width=200 />
+        <img src="../../images/phort_legend.png" alt="Legend for viability score" width=200 />
         <figcaption> Figure 5. Legend for the homestead score</figcaption>
     </figure> 
     <p>

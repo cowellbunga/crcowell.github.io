@@ -1,3 +1,6 @@
-.dropdown:hover .dropdown-menu {
-    display: list-item;
+/* Only adjust hover behavior on larger screens where hover makes sense */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
+}
